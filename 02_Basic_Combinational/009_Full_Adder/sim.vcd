@@ -1,5 +1,5 @@
 $date
-	Fri Jun  5 16:55:41 2026
+	Sat Jun  6 14:31:53 2026
 $end
 $version
 	Icarus Verilog
@@ -15,15 +15,21 @@ $var reg 1 $ b $end
 $var reg 1 % c $end
 $scope module uut $end
 $var wire 1 # a $end
+$var wire 1 & and_out1 $end
+$var wire 1 ' and_out2 $end
 $var wire 1 $ b $end
 $var wire 1 % c $end
-$var reg 1 " carry $end
-$var reg 1 ! sum $end
+$var wire 1 " carry $end
+$var wire 1 ! sum $end
+$var wire 1 ( xor_out $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+0(
+0'
+0&
 0%
 0$
 0#
@@ -34,23 +40,30 @@ $end
 1!
 1%
 #20000
+1(
 0%
 1$
 #30000
 1"
 0!
+1&
 1%
 #40000
 0"
 1!
+0&
 0%
 0$
 1#
 #50000
 1"
 0!
+1&
 1%
 #60000
+0&
+0(
+1'
 0%
 1$
 #70000
