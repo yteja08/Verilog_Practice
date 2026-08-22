@@ -1,0 +1,160 @@
+$date
+	Sat Aug 22 11:23:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ripple_carry_adder_tb $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " carry $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % c $end
+$scope module dut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % c $end
+$var wire 1 ( w3 $end
+$var wire 1 ) w2 $end
+$var wire 1 * w1 $end
+$var wire 4 + sum [3:0] $end
+$var wire 1 " carry $end
+$scope module fa0 $end
+$var wire 1 , a $end
+$var wire 1 - b $end
+$var wire 1 % c $end
+$var wire 1 * carry $end
+$var wire 1 . sum $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 * c $end
+$var wire 1 ) carry $end
+$var wire 1 1 sum $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 ) c $end
+$var wire 1 ( carry $end
+$var wire 1 4 sum $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 ( c $end
+$var wire 1 " carry $end
+$var wire 1 7 sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+b0 +
+0*
+0)
+0(
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+11
+b11 !
+b11 +
+1.
+10
+1,
+b10 $
+b10 '
+b1 #
+b1 &
+#20
+17
+1(
+1)
+01
+1*
+0.
+b1000 !
+b1000 +
+04
+1-
+12
+b11 $
+b11 '
+b101 #
+b101 &
+#30
+b0 !
+b0 +
+07
+1"
+00
+1/
+15
+b1 $
+b1 '
+b1111 #
+b1111 &
+#40
+1"
+07
+1(
+b0 !
+b0 +
+0.
+13
+0,
+02
+1%
+b101 $
+b101 '
+b1010 #
+b1010 &
+#50
+11
+17
+14
+b1110 !
+b1110 +
+0.
+10
+16
+1,
+12
+0%
+b1111 $
+b1111 '
+b1111 #
+b1111 &
+#60
+b1111 !
+b1111 +
+1.
+1%
+#70
