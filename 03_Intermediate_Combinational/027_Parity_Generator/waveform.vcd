@@ -1,0 +1,72 @@
+$date
+	Mon Aug 24 15:16:39 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module parity_generator_tb $end
+$var wire 5 ! parity [4:0] $end
+$var reg 4 " a [3:0] $end
+$scope module dut $end
+$var wire 4 # a [3:0] $end
+$var wire 1 $ parity_bit $end
+$var wire 5 % parity [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11000 %
+0$
+b1100 #
+b1100 "
+b11000 !
+$end
+#10
+1$
+b11101 !
+b11101 %
+b1110 "
+b1110 #
+#20
+1$
+b1001 !
+b1001 %
+b100 "
+b100 #
+#30
+b10001 !
+b10001 %
+b1000 "
+b1000 #
+#40
+1$
+b11 !
+b11 %
+b1 "
+b1 #
+#50
+0$
+b1010 !
+b1010 %
+b101 "
+b101 #
+#60
+0$
+b10100 !
+b10100 %
+b1010 "
+b1010 #
+#70
+0$
+b11110 !
+b11110 %
+b1111 "
+b1111 #
+#80

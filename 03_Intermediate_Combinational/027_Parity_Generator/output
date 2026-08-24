@@ -1,0 +1,70 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6496fc049e50 .scope module, "parity_generator_tb" "parity_generator_tb" 2 1;
+ .timescale 0 0;
+v0x6496fc06fdd0_0 .var "a", 3 0;
+v0x6496fc06fe90_0 .net "parity", 4 0, L_0x6496fc070550;  1 drivers
+S_0x6496fc05c140 .scope module, "dut" "parity_generator" 2 5, 3 1 0, S_0x6496fc049e50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 5 "parity";
+L_0x6496fc0700d0 .functor XOR 1, L_0x6496fc06ff60, L_0x6496fc070030, C4<0>, C4<0>;
+L_0x6496fc0702b0 .functor XOR 1, L_0x6496fc0700d0, L_0x6496fc070210, C4<0>, C4<0>;
+L_0x6496fc070440 .functor XOR 1, L_0x6496fc0702b0, L_0x6496fc070370, C4<0>, C4<0>;
+v0x6496fc05c320_0 .net *"_ivl_1", 0 0, L_0x6496fc06ff60;  1 drivers
+v0x6496fc06f660_0 .net *"_ivl_11", 0 0, L_0x6496fc070370;  1 drivers
+v0x6496fc06f740_0 .net *"_ivl_3", 0 0, L_0x6496fc070030;  1 drivers
+v0x6496fc06f800_0 .net *"_ivl_4", 0 0, L_0x6496fc0700d0;  1 drivers
+v0x6496fc06f8e0_0 .net *"_ivl_7", 0 0, L_0x6496fc070210;  1 drivers
+v0x6496fc06fa10_0 .net *"_ivl_8", 0 0, L_0x6496fc0702b0;  1 drivers
+v0x6496fc06faf0_0 .net "a", 3 0, v0x6496fc06fdd0_0;  1 drivers
+v0x6496fc06fbd0_0 .net "parity", 4 0, L_0x6496fc070550;  alias, 1 drivers
+v0x6496fc06fcb0_0 .net "parity_bit", 0 0, L_0x6496fc070440;  1 drivers
+L_0x6496fc06ff60 .part v0x6496fc06fdd0_0, 3, 1;
+L_0x6496fc070030 .part v0x6496fc06fdd0_0, 2, 1;
+L_0x6496fc070210 .part v0x6496fc06fdd0_0, 1, 1;
+L_0x6496fc070370 .part v0x6496fc06fdd0_0, 0, 1;
+L_0x6496fc070550 .concat [ 1 4 0 0], L_0x6496fc070440, v0x6496fc06fdd0_0;
+    .scope S_0x6496fc049e50;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6496fc049e50 {0 0 0};
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x6496fc06fdd0_0, 0, 4;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "parity_generator_tb.v";
+    "parity_generator.v";
