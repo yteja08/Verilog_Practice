@@ -1,0 +1,69 @@
+$date
+	Mon Aug 24 16:29:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module parity_checker_tb $end
+$var wire 1 ! parity_bit $end
+$var wire 1 " error $end
+$var reg 4 # data [3:0] $end
+$var reg 1 $ even_parity $end
+$var reg 1 % odd_parity $end
+$scope module dut $end
+$var wire 4 & data [3:0] $end
+$var wire 1 $ even_parity $end
+$var wire 1 % odd_parity $end
+$var reg 1 " error $end
+$var reg 1 ! parity_bit $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1100 &
+0%
+0$
+b1100 #
+x"
+x!
+$end
+#10
+0"
+0!
+1$
+b11 #
+b11 &
+#20
+1!
+b1110 #
+b1110 &
+#30
+b100 #
+b100 &
+#40
+b1000 #
+b1000 &
+#50
+0!
+0$
+1%
+b1 #
+b1 &
+#60
+1!
+b101 #
+b101 &
+#70
+b1010 #
+b1010 &
+#80
+b1111 #
+b1111 &
+#90
