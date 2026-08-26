@@ -1,0 +1,65 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5c4ea3b6bb80 .scope module, "comparator_1bit_tb" "comparator_1bit_tb" 2 1;
+ .timescale 0 0;
+v0x5c4ea3b90f20_0 .var "a", 0 0;
+v0x5c4ea3b90fe0_0 .net "a_equals_b", 0 0, L_0x5c4ea3b91630;  1 drivers
+v0x5c4ea3b91080_0 .net "a_greaterthan_b", 0 0, L_0x5c4ea3b91460;  1 drivers
+v0x5c4ea3b91180_0 .net "a_lessthan_b", 0 0, L_0x5c4ea3b91810;  1 drivers
+v0x5c4ea3b91250_0 .var "b", 0 0;
+S_0x5c4ea3b7d120 .scope module, "dut" "comparator_1bit" 2 5, 3 1 0, S_0x5c4ea3b6bb80;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "a_greaterthan_b";
+    .port_info 3 /OUTPUT 1 "a_equals_b";
+    .port_info 4 /OUTPUT 1 "a_lessthan_b";
+L_0x5c4ea3b91460 .functor AND 1, v0x5c4ea3b90f20_0, L_0x5c4ea3b91340, C4<1>, C4<1>;
+L_0x5c4ea3b915c0 .functor XOR 1, v0x5c4ea3b90f20_0, v0x5c4ea3b91250_0, C4<0>, C4<0>;
+L_0x5c4ea3b91810 .functor AND 1, L_0x5c4ea3b91770, v0x5c4ea3b91250_0, C4<1>, C4<1>;
+v0x5c4ea3b7d300_0 .net *"_ivl_1", 0 0, L_0x5c4ea3b91340;  1 drivers
+v0x5c4ea3b908f0_0 .net *"_ivl_4", 0 0, L_0x5c4ea3b915c0;  1 drivers
+v0x5c4ea3b909d0_0 .net *"_ivl_9", 0 0, L_0x5c4ea3b91770;  1 drivers
+v0x5c4ea3b90a70_0 .net "a", 0 0, v0x5c4ea3b90f20_0;  1 drivers
+v0x5c4ea3b90b30_0 .net "a_equals_b", 0 0, L_0x5c4ea3b91630;  alias, 1 drivers
+v0x5c4ea3b90c40_0 .net "a_greaterthan_b", 0 0, L_0x5c4ea3b91460;  alias, 1 drivers
+v0x5c4ea3b90d00_0 .net "a_lessthan_b", 0 0, L_0x5c4ea3b91810;  alias, 1 drivers
+v0x5c4ea3b90dc0_0 .net "b", 0 0, v0x5c4ea3b91250_0;  1 drivers
+L_0x5c4ea3b91340 .reduce/nor v0x5c4ea3b91250_0;
+L_0x5c4ea3b91630 .reduce/nor L_0x5c4ea3b915c0;
+L_0x5c4ea3b91770 .reduce/nor v0x5c4ea3b90f20_0;
+    .scope S_0x5c4ea3b6bb80;
+T_0 ;
+    %vpi_call 2 9 "$display", "TIME=%0t a=%0b b=%0b", $time, v0x5c4ea3b90f20_0, v0x5c4ea3b91250_0 {0 0 0};
+    %vpi_call 2 10 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5c4ea3b6bb80 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5c4ea3b90f20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5c4ea3b91250_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5c4ea3b90f20_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5c4ea3b91250_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5c4ea3b90f20_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "comparator_1bit_tb.v";
+    "comparator_1bit_dataflow.v";
