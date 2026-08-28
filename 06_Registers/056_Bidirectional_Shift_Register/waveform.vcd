@@ -1,0 +1,109 @@
+$date
+	Fri Aug 28 15:45:30 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bidirectional_shift_register_tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # direction $end
+$var reg 1 $ rst $end
+$var reg 1 % serial_in $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # direction $end
+$var wire 1 $ rst $end
+$var wire 1 % serial_in $end
+$var reg 4 & q [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx &
+x%
+x$
+x#
+0"
+bx !
+$end
+#5
+b0 !
+b0 &
+0%
+0#
+1$
+1"
+#10
+0"
+#15
+b1000 !
+b1000 &
+1"
+1%
+1#
+0$
+#20
+0"
+#25
+b1100 !
+b1100 &
+1"
+#30
+0"
+#35
+b1110 !
+b1110 &
+1"
+#40
+0"
+#45
+b111 !
+b111 &
+1"
+0%
+#50
+0"
+#55
+b1011 !
+b1011 &
+1"
+1%
+#60
+0"
+#65
+b111 !
+b111 &
+1"
+0#
+#70
+0"
+#75
+b1111 !
+b1111 &
+1"
+#80
+0"
+#85
+b0 !
+b0 &
+1"
+0%
+1$
+#90
+0"
+#95
+1"
+1%
+1#
+#100
+0"
+#105
+1"
