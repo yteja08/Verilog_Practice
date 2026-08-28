@@ -1,0 +1,103 @@
+$date
+	Fri Aug 28 17:29:08 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module up_down_counter_tb $end
+$var wire 4 ! count [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$var reg 1 $ up $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 1 $ up $end
+$var reg 4 % count [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+x$
+x#
+0"
+bx !
+$end
+#10
+b0 !
+b0 %
+1$
+1#
+1"
+#20
+0#
+0"
+#30
+b1 !
+b1 %
+1"
+#40
+0"
+#50
+b10 !
+b10 %
+1"
+#60
+0"
+#70
+b1 !
+b1 %
+1"
+0$
+#80
+0"
+#90
+b10 !
+b10 %
+1"
+1$
+#100
+0"
+#110
+b11 !
+b11 %
+1"
+#120
+0"
+#130
+b100 !
+b100 %
+1"
+#140
+0"
+#150
+b11 !
+b11 %
+1"
+0$
+#160
+0"
+#170
+b10 !
+b10 %
+1"
+#180
+0"
+#190
+b0 !
+b0 %
+1"
+1$
+1#
+#200
+0"
+#210
+1"
