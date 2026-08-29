@@ -1,0 +1,26 @@
+module mod_10_counter_tb();
+
+reg clk;
+reg rst;
+
+wire [3:0] count;
+
+mod_10_counter dut(.*);
+
+initial clk = 0;
+always #10 clk = ~clk;
+
+initial begin
+
+$dumpfile ("waveform.vcd");
+$dumpvars (0,mod_10_counter_tb);
+
+#10;
+rst=1;#10;
+rst=0;#320;
+
+$finish;
+
+end
+
+endmodule
