@@ -1,0 +1,44 @@
+$date
+	Thu Sep 10 15:42:37 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module case_statement_tb $end
+$var wire 2 ! b [1:0] $end
+$var reg 2 " a [1:0] $end
+$scope module dut $end
+$var wire 2 # a [1:0] $end
+$var reg 2 $ b [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11 $
+b0 #
+b0 "
+b11 !
+$end
+#10
+b10 !
+b10 $
+b1 "
+b1 #
+#20
+b1 !
+b1 $
+b10 "
+b10 #
+#30
+b0 !
+b0 $
+b11 "
+b11 #
+#40
