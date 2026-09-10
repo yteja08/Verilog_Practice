@@ -1,0 +1,122 @@
+$date
+	Thu Sep 10 15:03:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module generate_tb $end
+$var wire 16 ! y [15:0] $end
+$var parameter 32 " width $end
+$var reg 16 # a [15:0] $end
+$var reg 16 $ b [15:0] $end
+$scope module dut $end
+$var wire 16 % a [15:0] $end
+$var wire 16 & b [15:0] $end
+$var wire 16 ' y [15:0] $end
+$var parameter 32 ( width $end
+$scope begin genblk1[0] $end
+$var parameter 2 ) i $end
+$upscope $end
+$scope begin genblk1[1] $end
+$var parameter 2 * i $end
+$upscope $end
+$scope begin genblk1[2] $end
+$var parameter 3 + i $end
+$upscope $end
+$scope begin genblk1[3] $end
+$var parameter 3 , i $end
+$upscope $end
+$scope begin genblk1[4] $end
+$var parameter 4 - i $end
+$upscope $end
+$scope begin genblk1[5] $end
+$var parameter 4 . i $end
+$upscope $end
+$scope begin genblk1[6] $end
+$var parameter 4 / i $end
+$upscope $end
+$scope begin genblk1[7] $end
+$var parameter 4 0 i $end
+$upscope $end
+$scope begin genblk1[8] $end
+$var parameter 5 1 i $end
+$upscope $end
+$scope begin genblk1[9] $end
+$var parameter 5 2 i $end
+$upscope $end
+$scope begin genblk1[10] $end
+$var parameter 5 3 i $end
+$upscope $end
+$scope begin genblk1[11] $end
+$var parameter 5 4 i $end
+$upscope $end
+$scope begin genblk1[12] $end
+$var parameter 5 5 i $end
+$upscope $end
+$scope begin genblk1[13] $end
+$var parameter 5 6 i $end
+$upscope $end
+$scope begin genblk1[14] $end
+$var parameter 5 7 i $end
+$upscope $end
+$scope begin genblk1[15] $end
+$var parameter 5 8 i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1111 8
+b1110 7
+b1101 6
+b1100 5
+b1011 4
+b1010 3
+b1001 2
+b1000 1
+b111 0
+b110 /
+b101 .
+b100 -
+b11 ,
+b10 +
+b1 *
+b0 )
+b10000 (
+b10000 "
+$end
+#0
+$dumpvars
+b1000000001000000 '
+b1000001111100101 &
+b1001110001000000 %
+b1000001111100101 $
+b1001110001000000 #
+b1000000001000000 !
+$end
+#10
+b101000000110001 !
+b101000000110001 '
+b101000111111011 $
+b101000111111011 &
+b1101010000110001 #
+b1101010000110001 %
+#20
+b100 !
+b100 '
+b100101100 $
+b100101100 &
+b10011010010100 #
+b10011010010100 %
+#30
+b0 !
+b0 '
+b1111101000000000 $
+b1111101000000000 &
+b101011 #
+b101011 %
+#40
