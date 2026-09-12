@@ -1,0 +1,64 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x642e2e521b90 .scope module, "adder_tb" "adder_tb" 2 1;
+ .timescale 0 0;
+v0x642e2e536f50_0 .var "a", 3 0;
+v0x642e2e537010_0 .var "b", 3 0;
+v0x642e2e5370e0_0 .var/i "file", 31 0;
+v0x642e2e5371b0_0 .net "sum", 4 0, L_0x642e2e537570;  1 drivers
+S_0x642e2e521d20 .scope module, "dut" "adder" 2 9, 3 1 0, S_0x642e2e521b90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /OUTPUT 5 "sum";
+v0x642e2e512560_0 .net *"_ivl_0", 4 0, L_0x642e2e5372a0;  1 drivers
+L_0x7216fce30018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x642e2e536960_0 .net *"_ivl_3", 0 0, L_0x7216fce30018;  1 drivers
+v0x642e2e536a40_0 .net *"_ivl_4", 4 0, L_0x642e2e537410;  1 drivers
+L_0x7216fce30060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x642e2e536b00_0 .net *"_ivl_7", 0 0, L_0x7216fce30060;  1 drivers
+v0x642e2e536be0_0 .net "a", 3 0, v0x642e2e536f50_0;  1 drivers
+v0x642e2e536d10_0 .net "b", 3 0, v0x642e2e537010_0;  1 drivers
+v0x642e2e536df0_0 .net "sum", 4 0, L_0x642e2e537570;  alias, 1 drivers
+L_0x642e2e5372a0 .concat [ 4 1 0 0], v0x642e2e536f50_0, L_0x7216fce30018;
+L_0x642e2e537410 .concat [ 4 1 0 0], v0x642e2e537010_0, L_0x7216fce30060;
+L_0x642e2e537570 .arith/sum 5, L_0x642e2e5372a0, L_0x642e2e537410;
+    .scope S_0x642e2e521b90;
+T_0 ;
+    %vpi_func 2 13 "$fopen" 32, "output.txt", "w" {0 0 0};
+    %store/vec4 v0x642e2e5370e0_0, 0, 32;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x642e2e536f50_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x642e2e537010_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 21 "$fdisplay", v0x642e2e5370e0_0, "a = %d, b = %d, sum = %d", v0x642e2e536f50_0, v0x642e2e537010_0, v0x642e2e5371b0_0 {0 0 0};
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0x642e2e536f50_0, 0, 4;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x642e2e537010_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 27 "$fdisplay", v0x642e2e5370e0_0, "a = %d, b = %d, sum = %d", v0x642e2e536f50_0, v0x642e2e537010_0, v0x642e2e5371b0_0 {0 0 0};
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x642e2e536f50_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x642e2e537010_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 33 "$fdisplay", v0x642e2e5370e0_0, "a = %d, b = %d, sum = %d", v0x642e2e536f50_0, v0x642e2e537010_0, v0x642e2e5371b0_0 {0 0 0};
+    %vpi_call 2 36 "$fclose", v0x642e2e5370e0_0 {0 0 0};
+    %vpi_call 2 38 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "design_tb.v";
+    "design.v";
