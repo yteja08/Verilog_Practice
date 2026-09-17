@@ -1,0 +1,129 @@
+
+======================================
+          FIFO RESET
+======================================
+VCD info: dumpfile waveform.vcd opened for output.
+TIME=0 | W_EN=0 DATA_IN=00 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=1
+RESET RELEASED
+
+======================================
+          WRITE 4 VALUES
+======================================
+TIME=100000 | W_EN=1 DATA_IN=a1 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=0 | address=0 | data=a1
+TIME=120000 | W_EN=1 DATA_IN=b2 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=1 | address=1 | data=b2
+TIME=140000 | W_EN=1 DATA_IN=c3 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=2 | address=2 | data=c3
+TIME=160000 | W_EN=1 DATA_IN=d4 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=3 | address=3 | data=d4
+TIME=180000 | W_EN=0 DATA_IN=d4 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=1
+TIME=315000 | W_EN=0 DATA_IN=d4 | R_EN=0 DATA_OUT=xx | FULL=0 EMPTY=0
+
+======================================
+          READ 4 VALUES
+======================================
+TIME=420000 | W_EN=0 DATA_IN=d4 | R_EN=1 DATA_OUT=xx | FULL=0 EMPTY=0
+READ : time=0 | rptr=0 | address=0 | data=a1
+TIME=455000 | W_EN=0 DATA_IN=d4 | R_EN=1 DATA_OUT=a1 | FULL=0 EMPTY=0
+READ : time=0 | rptr=1 | address=1 | data=b2
+TIME=525000 | W_EN=0 DATA_IN=d4 | R_EN=1 DATA_OUT=b2 | FULL=0 EMPTY=0
+READ : time=0 | rptr=2 | address=2 | data=c3
+TIME=595000 | W_EN=0 DATA_IN=d4 | R_EN=1 DATA_OUT=c3 | FULL=0 EMPTY=0
+READ : time=0 | rptr=3 | address=3 | data=d4
+TIME=665000 | W_EN=0 DATA_IN=d4 | R_EN=1 DATA_OUT=d4 | FULL=0 EMPTY=1
+TIME=700000 | W_EN=0 DATA_IN=d4 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+
+======================================
+       WRITE 8 VALUES
+       FIFO SHOULD BECOME FULL
+======================================
+TIME=800000 | W_EN=1 DATA_IN=a0 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=4 | address=4 | data=a0
+TIME=820000 | W_EN=1 DATA_IN=a1 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=5 | address=5 | data=a1
+TIME=840000 | W_EN=1 DATA_IN=a2 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=6 | address=6 | data=a2
+TIME=860000 | W_EN=1 DATA_IN=a3 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=7 | address=7 | data=a3
+TIME=880000 | W_EN=1 DATA_IN=a4 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=8 | address=0 | data=a4
+TIME=900000 | W_EN=1 DATA_IN=a5 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=9 | address=1 | data=a5
+TIME=920000 | W_EN=1 DATA_IN=a6 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=10 | address=2 | data=a6
+TIME=940000 | W_EN=1 DATA_IN=a7 | R_EN=0 DATA_OUT=d4 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=11 | address=3 | data=a7
+TIME=950000 | W_EN=1 DATA_IN=a7 | R_EN=0 DATA_OUT=d4 | FULL=1 EMPTY=1
+TIME=960000 | W_EN=0 DATA_IN=a7 | R_EN=0 DATA_OUT=d4 | FULL=1 EMPTY=1
+TIME=1015000 | W_EN=0 DATA_IN=a7 | R_EN=0 DATA_OUT=d4 | FULL=1 EMPTY=0
+FULL TEST PASS : FIFO is FULL
+
+======================================
+       TRY WRITE WHEN FULL
+======================================
+TIME=1060000 | W_EN=1 DATA_IN=ff | R_EN=0 DATA_OUT=d4 | FULL=1 EMPTY=0
+Attempted write of FF while FULL
+TIME=1080000 | W_EN=0 DATA_IN=ff | R_EN=0 DATA_OUT=d4 | FULL=1 EMPTY=0
+
+======================================
+          READ 8 VALUES
+       FIFO SHOULD BECOME EMPTY
+======================================
+TIME=1190000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=d4 | FULL=1 EMPTY=0
+READ : time=0 | rptr=4 | address=4 | data=a0
+TIME=1225000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a0 | FULL=1 EMPTY=0
+TIME=1270000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a0 | FULL=0 EMPTY=0
+READ : time=0 | rptr=5 | address=5 | data=a1
+TIME=1295000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a1 | FULL=0 EMPTY=0
+READ : time=0 | rptr=6 | address=6 | data=a2
+TIME=1365000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a2 | FULL=0 EMPTY=0
+READ : time=0 | rptr=7 | address=7 | data=a3
+TIME=1435000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a3 | FULL=0 EMPTY=0
+READ : time=0 | rptr=8 | address=0 | data=a4
+TIME=1505000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a4 | FULL=0 EMPTY=0
+READ : time=0 | rptr=9 | address=1 | data=a5
+TIME=1575000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a5 | FULL=0 EMPTY=0
+READ : time=0 | rptr=10 | address=2 | data=a6
+TIME=1645000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a6 | FULL=0 EMPTY=0
+READ : time=0 | rptr=11 | address=3 | data=a7
+TIME=1715000 | W_EN=0 DATA_IN=ff | R_EN=1 DATA_OUT=a7 | FULL=0 EMPTY=1
+TIME=1750000 | W_EN=0 DATA_IN=ff | R_EN=0 DATA_OUT=a7 | FULL=0 EMPTY=1
+EMPTY TEST PASS : FIFO is EMPTY
+
+======================================
+       WRITE AFTER EMPTY
+       TEST WRAP-AROUND
+======================================
+TIME=1960000 | W_EN=1 DATA_IN=b0 | R_EN=0 DATA_OUT=a7 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=12 | address=4 | data=b0
+TIME=1980000 | W_EN=1 DATA_IN=b1 | R_EN=0 DATA_OUT=a7 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=13 | address=5 | data=b1
+TIME=2000000 | W_EN=1 DATA_IN=b2 | R_EN=0 DATA_OUT=a7 | FULL=0 EMPTY=1
+WRITE: time=0 | wptr=14 | address=6 | data=b2
+TIME=2020000 | W_EN=0 DATA_IN=b2 | R_EN=0 DATA_OUT=a7 | FULL=0 EMPTY=1
+TIME=2135000 | W_EN=0 DATA_IN=b2 | R_EN=0 DATA_OUT=a7 | FULL=0 EMPTY=0
+
+======================================
+          READ 3 VALUES
+======================================
+TIME=2240000 | W_EN=0 DATA_IN=b2 | R_EN=1 DATA_OUT=a7 | FULL=0 EMPTY=0
+READ : time=0 | rptr=12 | address=4 | data=b0
+TIME=2275000 | W_EN=0 DATA_IN=b2 | R_EN=1 DATA_OUT=b0 | FULL=0 EMPTY=0
+READ : time=0 | rptr=13 | address=5 | data=b1
+TIME=2345000 | W_EN=0 DATA_IN=b2 | R_EN=1 DATA_OUT=b1 | FULL=0 EMPTY=0
+READ : time=0 | rptr=14 | address=6 | data=b2
+TIME=2415000 | W_EN=0 DATA_IN=b2 | R_EN=1 DATA_OUT=b2 | FULL=0 EMPTY=1
+TIME=2450000 | W_EN=0 DATA_IN=b2 | R_EN=0 DATA_OUT=b2 | FULL=0 EMPTY=1
+
+======================================
+       FINAL FIFO STATUS
+======================================
+FULL  = 0
+EMPTY = 1
+
+======================================
+       SIMULATION FINISHED
+======================================
+testbench.v:401: $finish called at 2650000 (1ps)
+
